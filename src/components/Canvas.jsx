@@ -9,9 +9,10 @@ import CurrentScore from './CurrentScore'
 import FlyingObject from './FlyingObject';
 import StartGame from './StartGame';
 import Title from './Title';
+import { gameHeight } from '../utils/constants';
+
 
 const Canvas = (props) => {
-	const gameHeight = 1200;
 	const viewBox = [window.innerWidth / -2, 100 - gameHeight, window.innerWidth, gameHeight];
 	return (
 		<svg
@@ -40,8 +41,8 @@ const Canvas = (props) => {
 
 			{props.gameState.started &&
 				<g>
-					<FlyingObject position={{ x: -150, y: -300 }} />
-					<FlyingObject position={{ x: 150, y: -300 }} />
+					{/* <FlyingObject position={{ x: -150, y: -300 }} /> */}
+					{/* <FlyingObject position={{ x: 150, y: -300 }} /> */}
 				</g>
 			}
 
